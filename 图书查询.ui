@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>booksearch</class>
+ <widget class="QWidget" name="booksearch">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>150</y>
+     <width>891</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="autoScrollMargin">
+    <number>15</number>
+   </property>
+   <property name="dragEnabled">
+    <bool>true</bool>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>98</number>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>书号</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>类别</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>书名</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>出版社</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>年份</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>作者</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>价格</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>总藏书量</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>库存</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="query_label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>17</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>80</y>
+     <width>891</width>
+     <height>58</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="h1" stretch="10,20,20,10,20,10">
+    <item>
+     <layout class="QVBoxLayout" name="h1v4">
+      <item>
+       <widget class="QLabel" name="h1v4label1">
+        <property name="text">
+         <string>类别</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="h1v4line1"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="h1v5">
+      <item>
+       <widget class="QLabel" name="h1v5label1">
+        <property name="text">
+         <string>书名</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="h1v5line1"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="h1v6">
+      <item>
+       <widget class="QLabel" name="h1v6label1">
+        <property name="text">
+         <string>出版社</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="h1v6line1"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="h1v3">
+      <item>
+       <widget class="QLabel" name="h1v3label1">
+        <property name="text">
+         <string>年份</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="h1v3line1"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="h1v2">
+      <item>
+       <widget class="QLabel" name="h1v2label1">
+        <property name="text">
+         <string>价格</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="h1v2h1">
+        <item>
+         <widget class="QLineEdit" name="h1v2h1line2"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="h1v2h1label1">
+          <property name="text">
+           <string>至</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="h1v2h1line1"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="h1v1">
+      <item>
+       <widget class="QLabel" name="h1v1label1">
+        <property name="text">
+         <string>作者</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="h1v1line1"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
