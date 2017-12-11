@@ -7,7 +7,6 @@ Created on Fri Dec  8 20:50:02 2017
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from onebookin import Ui_bookin
-from funcc import *
 import pymysql
 
 class bookin(QtWidgets.QWidget, Ui_bookin):
@@ -26,9 +25,7 @@ class bookin(QtWidgets.QWidget, Ui_bookin):
         writer = self.lineEdit_7.text()
         price = self.lineEdit_8.text()
         number = self.lineEdit_6.text()
-        print(year)
-        print(writer)
-        print(type(year))
+
         db = pymysql.connect("localhost","root","","library",charset='utf8' )
         cursor = db.cursor()
         sql = """INSERT INTO book(idb,bclass,bname,press,year,writer,price,number)

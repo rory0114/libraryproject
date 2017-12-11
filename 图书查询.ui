@@ -99,9 +99,9 @@
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>80</y>
-     <width>891</width>
-     <height>58</height>
+     <y>70</y>
+     <width>841</width>
+     <height>61</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="h1" stretch="10,20,20,10,20,10">
@@ -204,6 +204,19 @@
      </layout>
     </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>80</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查找</string>
+   </property>
   </widget>
  </widget>
  <resources/>

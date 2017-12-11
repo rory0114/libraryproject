@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file '图书查询.ui'
 #
-# Created by: PyQt5 UI code generator 5.9.2
+# Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -45,7 +45,7 @@ class Ui_booksearch(object):
         self.query_label.setFont(font)
         self.query_label.setObjectName("query_label")
         self.horizontalLayoutWidget = QtWidgets.QWidget(booksearch)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(60, 70, 841, 61))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(60, 80, 891, 58))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.h1 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.h1.setContentsMargins(0, 0, 0, 0)
@@ -119,9 +119,6 @@ class Ui_booksearch(object):
         self.h1.setStretch(3, 10)
         self.h1.setStretch(4, 20)
         self.h1.setStretch(5, 10)
-        self.pushButton = QtWidgets.QPushButton(booksearch)
-        self.pushButton.setGeometry(QtCore.QRect(910, 80, 51, 51))
-        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(booksearch)
         QtCore.QMetaObject.connectSlotsByName(booksearch)
@@ -155,5 +152,4 @@ class Ui_booksearch(object):
         self.h1v2label1.setText(_translate("booksearch", "价格"))
         self.h1v2h1label1.setText(_translate("booksearch", "至"))
         self.h1v1label1.setText(_translate("booksearch", "作者"))
-        self.pushButton.setText(_translate("booksearch", "查找"))
 
