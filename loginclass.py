@@ -30,7 +30,7 @@ class login(QtWidgets.QWidget, Ui_Form):
         cursor.execute(sql)
         result = cursor.fetchone()
         if result!='':
-            librarian=name
+            librariannow=name
         else:
             QtWidgets.QMessageBox.information(self,"Information","管理员登录失败，请重试")
             

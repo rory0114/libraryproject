@@ -28,8 +28,8 @@ class bookin(QtWidgets.QWidget, Ui_bookin):
 
         db = pymysql.connect("localhost","root","","library",charset='utf8' )
         cursor = db.cursor()
-        sql = """INSERT INTO book(idb,bclass,bname,press,year,writer,price,number)
-         VALUES ('%s', '%s', '%s','%s',%s,'%s', %s, %s )"""%(idb,classb,bname,press,year,writer,price,number)
+        sql = """INSERT INTO book(idb,bclass,bname,press,year,writer,price,number,remain)
+         VALUES ('%s', '%s', '%s','%s',%s,'%s', %s, %s,%s )"""%(idb,classb,bname,press,year,writer,price,number,number)
         print(sql)
         cursor.execute(sql)
         db.commit()

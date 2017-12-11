@@ -22,7 +22,7 @@ class cardmanage(QtWidgets.QWidget, Ui_card_manage):
         idc=self.lineEdit_2.text()
         cname=self.lineEdit_3.text()
         company=self.lineEdit.text()
-        cclass=self.comboBox.text()
+        cclass=self.comboBox.currentText()
         
         
         db = pymysql.connect("localhost","root","","library",charset='utf8' )
