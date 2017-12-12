@@ -7,15 +7,14 @@ Created on Fri Dec  8 19:32:02 2017
 from PyQt5 import QtCore, QtGui, QtWidgets
 from homepageclass import  homepage
 import sys
-from booksearchclass import booksearch
+import globalval
 
 if __name__=="__main__":
     app = QtWidgets.QApplication(sys.argv)
-    global homepage
-    global booksearch
+    
     homepage=homepage()
     homepage.show()
-  
+    globalval.init()
     
     print("1")
     sys.exit(app.exec_())
