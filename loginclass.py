@@ -15,7 +15,7 @@ class login(QtWidgets.QWidget, Ui_Form):
         super(login, self).__init__(parent)
         self.setupUi(self)
         
-        #self.buttonBox.Ok.clicked.connect(self.varify)
+        self.pushButton.clicked.connect(self.varify)
         #self.buttonBox.Cancel.clicked.connect()
 
     #验证账号密码
@@ -29,8 +29,11 @@ class login(QtWidgets.QWidget, Ui_Form):
         print(sql)
         cursor.execute(sql) 
         result = cursor.fetchone()
+        print(result[0])
         if result is not None:
-            globval.setval(result[0])
+            globalval.setval(result[0])
+            print(globalval.librarian)
+            QtWidgets.QMessageBox.information(self,"Information","管理员登录成功")
             
         else:
             QtWidgets.QMessageBox.information(self,"Information","管理员登录失败，请重试")

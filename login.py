@@ -12,10 +12,6 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(400, 300)
-        self.buttonBox = QtWidgets.QDialogButtonBox(Form)
-        self.buttonBox.setGeometry(QtCore.QRect(80, 230, 233, 34))
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName("buttonBox")
         self.verticalLayoutWidget = QtWidgets.QWidget(Form)
         self.verticalLayoutWidget.setGeometry(QtCore.QRect(80, 60, 241, 161))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
@@ -51,6 +47,9 @@ class Ui_Form(object):
         font.setPointSize(15)
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
+        self.pushButton = QtWidgets.QPushButton(Form)
+        self.pushButton.setGeometry(QtCore.QRect(250, 240, 112, 34))
+        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -61,4 +60,5 @@ class Ui_Form(object):
         self.label.setText(_translate("Form", "账号"))
         self.label_2.setText(_translate("Form", "密码"))
         self.label_3.setText(_translate("Form", "请登录"))
+        self.pushButton.setText(_translate("Form", "ok"))
 

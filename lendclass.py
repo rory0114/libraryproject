@@ -9,7 +9,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from lend import Ui_lend
 import pymysql
 import datetime
-import glovalvar
+import globalval
 class lend(QtWidgets.QWidget, Ui_lend):
     def __init__(self, parent=None):
         super(lend, self).__init__(parent)
@@ -23,8 +23,8 @@ class lend(QtWidgets.QWidget, Ui_lend):
         idc=self.lineEdit_2.text()
         db = pymysql.connect("localhost","root","","library",charset='utf8' )
         cursor = db.cursor()
-        sql = """INSERT INTO record(idc,idb,lenddate,idm)
-           VALUES ('%s', '%s','%s', '%s','%s')"""%(idb,idc,datetime.datetime.now().strftime('%Y-%m-%d'), globalvar.getval())
+        sql = """INSERT INTO record(idb,idc,lendday,idm)
+           VALUES ('%s', '%s','%s','%s')"""%(idb,idc,datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'), globalval.getval())
         print(sql)
         try:
             cursor.execute(sql)
