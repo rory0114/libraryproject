@@ -30,6 +30,9 @@ class lend(QtWidgets.QWidget, Ui_lend):
             cursor.execute(sql)
             db.commit()
             QtWidgets.QMessageBox.information(self,"Information","借书成功")
+            sql="""update book set remain=remain-1 where idb='%s' and remain>0"""%(idb)
+            cursor.execute(sql)
+            db.commit()
         except:
             QtWidgets.QMessageBox.information(self,"Information","借书失败")
             
