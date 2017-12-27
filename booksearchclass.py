@@ -19,6 +19,7 @@ class booksearch(QtWidgets.QWidget, Ui_booksearch):
 
 #搜索
     def search(self):
+        self.tableWidget.clearContents()
         bclass = self.h1v4line1.text()
         bname = self.h1v5line1.text()
         press = self.h1v6line1.text()
@@ -36,10 +37,10 @@ class booksearch(QtWidgets.QWidget, Ui_booksearch):
                 if anum!=0:
                     sql=sql+" and "
                 if i=="price_down":
-                    s="%s>%s"%(i,dic[i])
+                    s="%s>%s"%("price",dic[i])
                     sql=sql+s
                 elif i=="price_up":
-                    s="%s<%s"%(i,dic[i])
+                    s="%s<%s"%("price",dic[i])
                     sql=sql+s
                 elif i=="year":
                     s="%s=%s"%(i,dic[i])

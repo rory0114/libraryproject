@@ -24,15 +24,16 @@ class lend(QtWidgets.QWidget, Ui_lend):
         db = pymysql.connect("localhost","root","","library",charset='utf8' )
         cursor = db.cursor()
         sql = """INSERT INTO record(idb,idc,lendday,idm)
-           VALUES ('%s', '%s','%s','%s')"""%(idb,idc,datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'), globalval.getval())
+           VALUES ('%s', '%s','%s','%s')"""%(idb,idc,datetime.datetime.now().strftime('%Y-%m-%d'), globalval.getval())
         print(sql)
         try:
             cursor.execute(sql)
             db.commit()
-            QtWidgets.QMessageBox.information(self,"Information","借书成功")
             sql="""update book set remain=remain-1 where idb='%s' and remain>0"""%(idb)
+            print(sql)
             cursor.execute(sql)
             db.commit()
+            QtWidgets.QMessageBox.information(self,"Information","借书成功")
         except:
             QtWidgets.QMessageBox.information(self,"Information","借书失败")
             

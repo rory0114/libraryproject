@@ -24,28 +24,36 @@ class cardmanage(QtWidgets.QWidget, Ui_card_manage):
         company=self.lineEdit.text()
         cclass=self.comboBox.currentText()
         
+        try:
+            db = pymysql.connect("localhost","root","","library",charset='utf8' )
+            cursor = db.cursor()
+            sql = """INSERT INTO card(idc,cname,company,cclass)
+             VALUES ('%s', '%s', '%s','%s')"""%(idc,cname,company,cclass)
+            print(sql)
+            cursor.execute(sql)
+            db.commit()
+            db.close()
+            QtWidgets.QMessageBox.information(self,"Information","添加成功")
         
-        db = pymysql.connect("localhost","root","","library",charset='utf8' )
-        cursor = db.cursor()
-        sql = """INSERT INTO card(idc,cname,company,cclass)
-         VALUES ('%s', '%s', '%s','%s')"""%(idc,cname,company,cclass)
-        print(sql)
-        cursor.execute(sql)
-        db.commit()
-        db.close()
+        except:
+            QtWidgets.QMessageBox.information(self,"Information","添加失败")
 
 
 #删除借书证
     def delcard(self):
         idc=self.lineEdit_4.text()
-        db = pymysql.connect("localhost","root","","library",charset='utf8' )
-        cursor = db.cursor()
-        sql = """delete from card
-         where idc='%s' """%(idc)
-        print(sql)
-        cursor.execute(sql)
-        db.commit()
-        db.close()
+        try:
+            db = pymysql.connect("localhost","root","","library",charset='utf8' )
+            cursor = db.cursor()
+            sql = """delete from card
+             where idc='%s' """%(idc)
+            print(sql)
+            cursor.execute(sql)
+            db.commit()
+            db.close()
+            QtWidgets.QMessageBox.information(self,"Information","删除成功")
+        except:
+            QtWidgets.QMessageBox.information(self,"Information","删除失败")
 
         
         

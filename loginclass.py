@@ -29,7 +29,6 @@ class login(QtWidgets.QWidget, Ui_Form):
         print(sql)
         cursor.execute(sql) 
         result = cursor.fetchone()
-        print(result[0])
         if result is not None:
             globalval.setval(result[0])
             print(globalval.librarian)

@@ -25,10 +25,12 @@ class retbook(QtWidgets.QWidget, Ui_Form):
         try:
             db = pymysql.connect("localhost","root","","library",charset='utf8' )
             cursor = db.cursor()
-            sql = """update  record set retday="%s" where 
-                    idb='%s' and idc='%s' """%(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),idb,idc)
+            sql = """update  record set returnday="%s" where 
+                    idb='%s' and idc='%s' """%(datetime.datetime.now().strftime('%Y-%m-%d'),idb,idc)
+            cursor.execute(sql)
             print(sql)
             sql="""update book set remain=remain+1 where idb='%s' and remain<number"""%(idb)
+            print(sql)
             cursor.execute(sql)
             db.commit()
         
